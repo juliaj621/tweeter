@@ -1,0 +1,24 @@
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120px;
+  z-index: 10000;
+  background: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+ 
+#tweeter {
+  font-family: 'Bungee', cursive;
+  size: 700;
+  margin: 1.5em;
+}
+
+#newTweet {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 1.5em;
+}
