@@ -1,0 +1,17 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f7b666;
+  /* background-image: url("https://www.transparenttextures.com/patterns/arches.png");  */
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+#userName {
+  position: relative;
+  margin: 0em;
+  color: #FFFFFF;
+  font-weight: normal;
+}
