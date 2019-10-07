@@ -25,3 +25,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+   position: absolute;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 400px;
+   box-sizing: border-box;
+ }
