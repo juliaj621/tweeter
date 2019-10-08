@@ -1,4 +1,4 @@
-header {
+#user-header {
   height: 400px;
   width: 100%;
   position: absolute;
@@ -9,7 +9,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-#userName {
+#user-name {
   position: relative;
   margin: 0em;
   color: #FFFFFF;

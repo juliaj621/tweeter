@@ -1,0 +1,72 @@
+section.composed-tweet {
+  position: relative;
+  height: 250px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: solid;
+  border-color: #545149;
+  border-width: 0.15em;
+}
+
+section.composed-tweet:hover {
+   text-shadow: 0.5px 0.25px #545149;
+   box-shadow: 5px 5px #c2cfec;
+}
+
+section.composed-tweet:hover #user-id {
+  color: #c2cfec;
+}
+
+#tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+ #user-id {
+   color: #f4f1ec;
+}
+
+#tweet-text {
+  position: absolute;
+  padding-top: 2.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  width: 94.25%;
+}
+ 
+footer.composed-tweet {
+  position: absolute;
+  width: 94.25%;
+  bottom: 0px;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid;
+  border-top-color: #545149;
+  border-top-width: 0.15em;
+}
+
+#date {
+  font-size: 15px;
+  padding-left: 1em;
+}
+
+button.icon-button {
+  background-color: transparent;
+  border: none;
+  color: #4056A1
+}
+
+#icons {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1em;
+}
+

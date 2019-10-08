@@ -7,7 +7,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- External Fonts -->
+    <!-- External Fonts + Icons -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/composed-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -22,6 +23,7 @@
     <!-- App JS - MAY NEED TO MOVE TO BOTTOM OF BODY BEST PRACTICE-->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://use.fontawesome.com/dcdfd5f0d7.js"></script>
   </head>
 
   <body>
@@ -33,13 +35,13 @@
     </nav>
 
      <!-- User Header -->
-     <header>
+     <header id="user-header">
         <div>
             <img src="/images/profile-hex.png"> 
         </div>
         <br>
         <div>
-            <h2 id="userName" ><b>Your</b> Name</h2>
+            <h2 id="user-name" ><b>Julia</b> Jachimowicz</h2>
         </div>
     </header>
 
@@ -55,6 +57,23 @@
               </div>
             </form>
           </section>
+        <section class="composed-tweet">
+          <article>
+            <header id="tweet-header">
+              <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>Julia Jachimowicz</span>
+              <span id="user-id">@juliajachimowicz</span>
+            </header>
+            <span id="tweet-text">This is where the tweet goes This is where the tweet goes This is where the tweet goes This is where the tweet goes This is where the tweet </span>
+            <footer class="composed-tweet">
+              <span id="date">Date</span>
+              <div id="icons">
+                <button class="icon-button"><i class="fa fa-flag" aria-hidden="true"></i></button>
+                <button class="icon-button"><i class="fa fa-retweet" aria-hidden="true"></i></button>
+                <button class="icon-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
+              </div>
+            </footer>
+          </article>
+        </section>
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer quis auctor elit sed vulputate mi sit amet mauris. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Lectus sit amet est placerat. Sit amet est placerat in egestas erat imperdiet sed. Sed viverra tellus in hac. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Pellentesque id nibh tortor id aliquet lectus proin. Tempus iaculis urna id volutpat lacus laoreet non. Curabitur gravida arcu ac tortor dignissim convallis aenean. Eget velit aliquet sagittis id consectetur purus ut. Sit amet consectetur adipiscing elit. Morbi tempus iaculis urna id volutpat lacus laoreet. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Sociis natoque penatibus et magnis. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Ac turpis egestas sed tempus. Sed euismod nisi porta lorem. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Leo vel fringilla est ullamcorper eget nulla facilisi.
 
           Sit amet nisl purus in mollis nunc sed. Et tortor at risus viverra adipiscing at in. Iaculis at erat pellentesque adipiscing commodo elit at. Diam maecenas sed enim ut sem viverra aliquet. Diam maecenas sed enim ut sem viverra aliquet eget. Varius vel pharetra vel turpis nunc eget. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Ante in nibh mauris cursus. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Enim sed faucibus turpis in eu mi bibendum neque egestas. Feugiat nisl pretium fusce id velit ut tortor pretium. Quis viverra nibh cras pulvinar mattis nunc sed. Magna fringilla urna porttitor rhoncus dolor. Urna duis convallis convallis tellus id interdum velit laoreet.
