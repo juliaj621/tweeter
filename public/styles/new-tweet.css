@@ -11,23 +11,22 @@ textarea {
   border-bottom: solid;
   border-bottom-color: #545149;
   border-bottom-width: 0.25em;
-  background-color: transparent;
+  background-color: #faf8f5;
   font-weight: bold
 }
 
-/* textarea[placeholder] {
-
-} */
+div.form-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
 
 input {
-  position: absolute;
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
 }
 
 span.counter {
-  position: absolute;
-  right: 0px;
   font-family: 'Bungee', cursive;
 }
