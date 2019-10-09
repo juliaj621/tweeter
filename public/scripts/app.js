@@ -1,11 +1,17 @@
 $("#tweet-submit").submit(function( event ) {
   event.preventDefault();
-  console.log($( this ).serialize());
-  $.ajax({ method: 'POST', url: '/tweets', data: $( this ).serialize()})
-  .then(function (data) {
-    console.log('Success: ', data);
-    loadTweets(data)
-  });
+  let data = $('#tweetTextArea').val();
+  if (data.length === 0 || data === null) {
+    alert("Please enter text into field");
+  } else if (data.length > 140) {
+    alert("Please enter less than 140 characters");
+  } else {
+    $.ajax({ method: 'POST', url: '/tweets', data: $( this ).serialize()})
+    .then(function (data) {
+      console.log('Success: ', data);
+      loadTweets(data)
+    });
+  }
 });
 
 const loadTweets = function () {
@@ -44,4 +50,4 @@ const createTweetElement = function(tweetObject) {
       </footer>
     </article>`)
   return $tweet;
-}
+};
