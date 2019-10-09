@@ -31,15 +31,21 @@ const renderTweets = function(tweets) {
   }
 };
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetObject) {
   let $tweet = $('<article>').addClass('tweet');
   $tweet.append(
     `<article class="composed-tweet">
       <header id="tweet-header">
-        <span id="user-image"><img src="https://i.imgur.com/nlhLi3I.png"> ${tweetObject.user.name}</span>
-        <span id="user-id">${tweetObject.user.handle}</span>
+        <span id="user-image"><img src="https://i.imgur.com/nlhLi3I.png"> ${escape(tweetObject.user.name)}</span>
+        <span id="user-id">${escape(tweetObject.user.handle)}</span>
       </header>
-      <span id="tweet-text">${tweetObject.content.text}</span>
+      <span id="tweet-text">${escape(tweetObject.content.text)}</span>
       <footer class="composed-tweet">
         <span id="date">${new Date(tweetObject.created_at)} days ago</span>
         <div id="icons">
