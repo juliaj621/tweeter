@@ -41,7 +41,7 @@ const createTweetElement = function(tweetObject) {
       </header>
       <span id="tweet-text">${tweetObject.content.text}</span>
       <footer class="composed-tweet">
-        <span id="date">${tweetObject.created_at} days ago</span>
+        <span id="date">${new Date(tweetObject.created_at)} days ago</span>
         <div id="icons">
           <button class="icon-button"><i class="fa fa-flag" aria-hidden="true"></i></button>
           <button class="icon-button"><i class="fa fa-retweet" aria-hidden="true"></i></button>
