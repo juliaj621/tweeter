@@ -27,7 +27,7 @@ const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (let i = 0; i < tweets.length; i++) {
     let newTweet = createTweetElement(tweets[i])
-    $('#tweets-container').append(newTweet);
+    $('#tweets-container').prepend(newTweet);
   }
 };
 
