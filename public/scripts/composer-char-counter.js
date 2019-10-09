@@ -8,5 +8,5 @@ $(document).ready(function() {
     } else {
       $(this).siblings(".form-button").children(".counter").css("color", "#545149");
     }
-  })
+  });
 });
