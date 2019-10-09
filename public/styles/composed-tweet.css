@@ -1,4 +1,4 @@
-section.composed-tweet {
+article.composed-tweet {
   display: flex;
   flex-direction: column;
   height: 250px;
@@ -6,14 +6,15 @@ section.composed-tweet {
   border: solid;
   border-color: #545149;
   border-width: 0.15em;
+  margin-bottom: 25px;
 }
 
-section.composed-tweet:hover {
+article.composed-tweet:hover {
   text-shadow: 0.5px 0.25px #545149;
   box-shadow: 5px 5px #c2cfec;
 }
 
-section.composed-tweet:hover #user-id {
+article.composed-tweet:hover #user-id {
   color: #c2cfec;
 }
 
