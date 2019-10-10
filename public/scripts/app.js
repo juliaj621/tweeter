@@ -1,45 +1,45 @@
-$("#tweet-submit").submit(function( event ) {
+$("#tweet-submit").submit(function(event) {
   event.preventDefault();
   let data = $('#tweetTextArea').val();
   if (data.length === 0 || data === null) {
-    $("#too-many").slideUp("medium")
-    $("#not-enough").slideUp("medium")
-    $("#not-enough").slideDown("medium")
+    $("#too-many").slideUp("medium");
+    $("#not-enough").slideUp("medium");
+    $("#not-enough").slideDown("medium");
   } else if (data.length > 140) {
-    $("#not-enough").slideUp("medium")
-    $("#too-many").slideUp("medium")
-    $("#too-many").slideDown("medium")
+    $("#not-enough").slideUp("medium");
+    $("#too-many").slideUp("medium");
+    $("#too-many").slideDown("medium");
   } else {
-    $("#too-many").slideUp("medium")
-    $("#not-enough").slideUp("medium")
-    $.ajax({ method: 'POST', url: '/tweets', data: $( this ).serialize()})
-    .then(function (data) {
-      loadTweets(data)
-      $("#tweetTextArea").val('')
-      $(".counter").text('140')
-    });
+    $("#too-many").slideUp("medium");
+    $("#not-enough").slideUp("medium");
+    $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize()})
+      .then(function(data) {
+        loadTweets(data);
+        $("#tweetTextArea").val('');
+        $(".counter").text('140');
+      });
   }
 });
 
-$("#header-arrow").on("click", function (event) {
+$("#header-arrow").on("click", function(event) {
   event.preventDefault();
-  $(".new-tweet").slideToggle("medium")
-  $("#tweetTextArea").focus()
-})
+  $(".new-tweet").slideToggle("medium");
+  $("#tweetTextArea").focus();
+});
 
-const loadTweets = function () {
+const loadTweets = function() {
   $.ajax({method: 'GET', url: '/tweets', dataType: 'JSON'})
-  .then(res => {
-    console.log('Success: ', renderTweets(res))
-  });
+    .then(res => {
+      console.log('Success: ', renderTweets(res));
+    });
 };
 
-loadTweets()
+loadTweets();
 
 const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (let i = 0; i < tweets.length; i++) {
-    let newTweet = createTweetElement(tweets[i])
+    let newTweet = createTweetElement(tweets[i]);
     $('#tweets-container').prepend(newTweet);
   }
 };
@@ -67,23 +67,22 @@ const createTweetElement = function(tweetObject) {
           <button class="icon-button"><i class="fa fa-heart" aria-hidden="true"></i></button>
         </div>
       </footer>
-    </article>`)
+    </article>`);
   return $tweet;
 };
 
-const scrollButtonAppear = $(window).scroll(function () {
+$(window).scroll(function() {
   if (($(window).scrollTop()) >= 250) {
-    $("#scroll-button").removeClass("before-scroll")
-    $("#scroll-button").addClass("after-scroll")
+    $("#scroll-button").removeClass("before-scroll");
+    $("#scroll-button").addClass("after-scroll");
+  } else {
+    $("#scroll-button").addClass("before-scroll");
+    $("#scroll-button").removeClass("after-scroll");
   }
-  else {
-    $("#scroll-button").addClass("before-scroll")
-    $("#scroll-button").removeClass("after-scroll")
-  }
-})
+});
 
-const scrollButtonClick = $("#scroll-button").on("click", function (event) {
+$("#scroll-button").on("click", function(event) {
   event.preventDefault();
-  $('html,body').animate({scrollTop: 0}, 'slow')
-  $('html,body').animate({scrollTop: 0}, 'slow')
-})
+  $('html,body').animate({scrollTop: 0}, 'slow');
+  $('html,body').animate({scrollTop: 0}, 'slow');
+});
