@@ -14,6 +14,10 @@ $("#tweet-submit").submit(function( event ) {
   }
 });
 
+$("#header-arrow").on("click", function () {
+  $(".new-tweet").toggle("medium")
+})
+
 const loadTweets = function () {
   $.ajax({method: 'GET', url: '/tweets', dataType: 'JSON'})
   .then(res => {

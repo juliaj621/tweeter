@@ -12,7 +12,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between
- }
+}
  
 #tweeter {
   font-family: 'Bungee', cursive;
@@ -22,4 +22,31 @@ nav {
 #newTweet {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px
+}
+
+#header-arrow {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5em;
+  color: orange;
+  font-size: 27px;
+  height: 30px;
+  animation: bounce 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  75%,
+  100% {
+  transform: translateY(0);
+  }
+  40% {
+  transform: translateY(-10px);
+  }
 }

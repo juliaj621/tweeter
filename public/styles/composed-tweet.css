@@ -7,6 +7,7 @@ article.composed-tweet {
   border-color: #545149;
   border-width: 0.15em;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 article.composed-tweet:hover {
