@@ -3,9 +3,11 @@ $("#tweet-submit").submit(function( event ) {
   let data = $('#tweetTextArea').val();
   if (data.length === 0 || data === null) {
     $("#too-many").slideUp("medium")
+    $("#not-enough").slideUp("medium")
     $("#not-enough").slideDown("medium")
   } else if (data.length > 140) {
     $("#not-enough").slideUp("medium")
+    $("#too-many").slideUp("medium")
     $("#too-many").slideDown("medium")
   } else {
     $("#too-many").slideUp("medium")
@@ -14,6 +16,7 @@ $("#tweet-submit").submit(function( event ) {
     .then(function (data) {
       loadTweets(data)
       $("#tweetTextArea").val('')
+      $(".counter").text('140')
     });
   }
 });
@@ -81,6 +84,6 @@ const scrollButtonAppear = $(window).scroll(function () {
 
 const scrollButtonClick = $("#scroll-button").on("click", function (event) {
   event.preventDefault();
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  $('html,body').animate({scrollTop: 0}, 'slow')
+  $('html,body').animate({scrollTop: 0}, 'slow')
 })
