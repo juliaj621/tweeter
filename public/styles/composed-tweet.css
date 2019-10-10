@@ -10,15 +10,6 @@ article.composed-tweet {
   margin-top: 25px;
 }
 
-article.composed-tweet:hover {
-  text-shadow: 0.5px 0.25px #545149;
-  box-shadow: 5px 5px #c2cfec;
-}
-
-article.composed-tweet:hover #user-id {
-  color: #c2cfec;
-}
-
 #tweet-header {
   display: flex;
   flex-direction: row;
@@ -31,7 +22,7 @@ article.composed-tweet:hover #user-id {
 }
 
 #user-id {
-   color: #f4f1ec;
+  color: #f4f1ec;
 }
 
 #tweet-text {
@@ -63,6 +54,19 @@ button.icon-button {
 }
 
 #icons {
+  display: none;
+}
+
+article.composed-tweet:hover {
+  text-shadow: 0.5px 0.25px #545149;
+  box-shadow: 5px 5px #c2cfec;
+}
+
+article.composed-tweet:hover #user-id {
+  color: #c2cfec;
+}
+
+article.composed-tweet:hover #icons {
   font-size: 15px;
   display: flex;
   flex-direction: row;
