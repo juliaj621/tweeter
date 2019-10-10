@@ -60,7 +60,7 @@ const createTweetElement = function(tweetObject) {
   $tweet.append(
     `<article class="composed-tweet">
       <header id="tweet-header">
-        <span id="user-image"><img src="https://i.imgur.com/nlhLi3I.png"> ${escape(tweetObject.user.name)}</span>
+        <span id="user-image"><img src=${tweetObject.user.avatars}> ${escape(tweetObject.user.name)}</span>
         <span id="user-id">${escape(tweetObject.user.handle)}</span>
       </header>
       <span id="tweet-text">${escape(tweetObject.content.text)}</span>
