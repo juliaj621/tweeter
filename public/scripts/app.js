@@ -51,6 +51,11 @@ const escape =  function(str) {
 };
 
 const createTweetElement = function(tweetObject) {
+  const getTime = function(milliseconds) {
+    let today = new Date()
+    let difference = Math.floor(((((today - milliseconds) / 1000) / 60) / 60) / 24)
+    return difference
+  }
   let $tweet = $('<article>').addClass('tweet');
   $tweet.append(
     `<article class="composed-tweet">
@@ -60,7 +65,7 @@ const createTweetElement = function(tweetObject) {
       </header>
       <span id="tweet-text">${escape(tweetObject.content.text)}</span>
       <footer class="composed-tweet">
-        <span id="date">${new Date(tweetObject.created_at)} days ago</span>
+        <span id="date">${getTime(tweetObject.created_at)} days ago</span>
         <div id="icons">
           <button class="icon-button"><i class="fa fa-flag" aria-hidden="true"></i></button>
           <button class="icon-button"><i class="fa fa-retweet" aria-hidden="true"></i></button>
@@ -83,6 +88,5 @@ $(window).scroll(function() {
 
 $("#scroll-button").on("click", function(event) {
   event.preventDefault();
-  $('html,body').animate({scrollTop: 0}, 'slow');
-  $('html,body').animate({scrollTop: 0}, 'slow');
+  $('html').animate({scrollTop: 0}, 'medium');
 });
