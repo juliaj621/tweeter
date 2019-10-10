@@ -56,16 +56,16 @@ body {
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
-  @media only screen and (min-width: 1024px) {
-    div.desktop {
-      display: flex;
-      flex-direction: row;
-      padding-top: 5%
-    }
-    main {
-      width: 70%;
-      margin-top: 25px;
-      padding-left: 10%;
-    }
-
+@media only screen and (min-width: 1024px) {
+  div.desktop {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%
   }
+  
+  main {
+    width: 70%;
+    margin-top: 25px;
+    padding-left: 10%;
+  }
+}
