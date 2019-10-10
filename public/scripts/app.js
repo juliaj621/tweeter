@@ -14,8 +14,10 @@ $("#tweet-submit").submit(function( event ) {
   }
 });
 
-$("#header-arrow").on("click", function () {
+$("#header-arrow").on("click", function (event) {
+  event.preventDefault();
   $(".new-tweet").toggle("medium")
+  $("#tweetTextArea").focus()
 })
 
 const loadTweets = function () {
