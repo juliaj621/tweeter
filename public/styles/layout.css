@@ -27,11 +27,32 @@ body {
  */
 
  main {
-   position: absolute;
-   width: 100%;
-   padding-left: 5%;
-   padding-right: 5%;
-   padding-top: 400px;
-   padding-bottom: 5%;
-   box-sizing: border-box;
- }
+  position: absolute;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 400px;
+  padding-bottom: 5%;
+  box-sizing: border-box;
+}
+
+.before-scroll {
+  position: fixed;
+  right: 0px;
+  color: #f7b666;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+  display: none;
+  height: 100px;
+}
+
+.after-scroll {
+  position: fixed;
+  right: 0px;
+  color: #f7b666;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+  height: 100px;
+}

@@ -46,10 +46,15 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
+        <!-- <div id="scroll-button"> -->
+          <button id="scroll-button" class="before-scroll"><i class="fa fa-chevron-circle-up"></i></button>
+        <!-- </div> -->
+          <section class="new-tweet">
+            <div class="error-message" id="not-enough"><i class="fa fa-exclamation-triangle"></i>Please enter text to continue!</div>
+            <div class="error-message" id="too-many"><i class="fa fa-exclamation-triangle"></i>Your entry exceeds 140 characters!</div>
             <h2>Compose Tweet</h2>
             <form id="tweet-submit" action="/tweets/" method="POST">
-              <textarea id="tweetTextArea" rows="5" name="text" placeholder="What are you humming about?"></textarea>
+              <textarea id="tweetTextArea" rows="3" name="text" placeholder="What are you humming about?"></textarea>
               <div class="form-button">
                 <input type="submit" value="Tweet">
                 <span class="counter">140</span>

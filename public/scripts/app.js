@@ -2,21 +2,25 @@ $("#tweet-submit").submit(function( event ) {
   event.preventDefault();
   let data = $('#tweetTextArea').val();
   if (data.length === 0 || data === null) {
-    alert("Please enter text into field");
+    $("#too-many").slideUp("medium")
+    $("#not-enough").slideDown("medium")
   } else if (data.length > 140) {
-    alert("Please enter less than 140 characters");
+    $("#not-enough").slideUp("medium")
+    $("#too-many").slideDown("medium")
   } else {
+    $("#too-many").slideUp("medium")
+    $("#not-enough").slideUp("medium")
     $.ajax({ method: 'POST', url: '/tweets', data: $( this ).serialize()})
     .then(function (data) {
-      console.log('Success: ', data);
       loadTweets(data)
+      $("#tweetTextArea").val('')
     });
   }
 });
 
 $("#header-arrow").on("click", function (event) {
   event.preventDefault();
-  $(".new-tweet").toggle("medium")
+  $(".new-tweet").slideToggle("medium")
   $("#tweetTextArea").focus()
 })
 
@@ -63,3 +67,20 @@ const createTweetElement = function(tweetObject) {
     </article>`)
   return $tweet;
 };
+
+const scrollButtonAppear = $(window).scroll(function () {
+  if (($(window).scrollTop()) >= 250) {
+    $("#scroll-button").removeClass("before-scroll")
+    $("#scroll-button").addClass("after-scroll")
+  }
+  else {
+    $("#scroll-button").addClass("before-scroll")
+    $("#scroll-button").removeClass("after-scroll")
+  }
+})
+
+const scrollButtonClick = $("#scroll-button").on("click", function (event) {
+  event.preventDefault();
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
