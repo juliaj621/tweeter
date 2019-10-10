@@ -1,11 +1,10 @@
 #user-header {
   height: 400px;
   width: 100%;
-  position: absolute;
+  position: relative;
   box-sizing: border-box;
   text-align: center;
   background-color: #f7b666;
-  /* background-image: url("https://www.transparenttextures.com/patterns/arches.png");  */
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
@@ -14,4 +13,17 @@
   margin: 0em;
   color: #FFFFFF;
   font-weight: normal;
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  #user-header {
+    width: 30%;
+    height: 50%;
+    min-width: 10%;
+    min-height: 10%;
+    margin: 50px;
+    padding: 20px;
+  }
+
 }
